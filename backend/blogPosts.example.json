@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "resume-parser-migration",
+    "title": "Why we replaced our resume parser — twice — in 18 months",
+    "excerpt": "OCR is solved. Resumes are not. The story of three pipelines and one painful migration.",
+    "category": "Engineering",
+    "tag": "▢ ENGINEERING",
+    "glyph": "01",
+    "publishedDate": "2026.04.28",
+    "readTime": "9 MIN",
+    "href": "#",
+    "sortOrder": 1
+  },
+  {
+    "slug": "communication-score",
+    "title": "What 12,000 mock interviews taught us about the \"communication\" score",
+    "excerpt": "Our most controversial dimension — and what we changed when partners pushed back.",
+    "category": "Hiring",
+    "tag": "▢ HIRING",
+    "glyph": "02",
+    "publishedDate": "2026.04.21",
+    "readTime": "11 MIN",
+    "href": "#",
+    "sortOrder": 2
+  }
+]

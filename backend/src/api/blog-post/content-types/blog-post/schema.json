@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog_posts",
+  "info": {
+    "singularName": "blog-post",
+    "pluralName": "blog-posts",
+    "displayName": "Blog Post",
+    "description": "Resources blog articles shown on the marketing site"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "excerpt": {
+      "type": "text"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Engineering",
+        "Hiring",
+        "Placements",
+        "AI & Methodology",
+        "Customer Stories",
+        "Product"
+      ],
+      "required": true
+    },
+    "tag": {
+      "type": "string"
+    },
+    "glyph": {
+      "type": "string"
+    },
+    "publishedDate": {
+      "type": "string"
+    },
+    "readTime": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    },
+    "sortOrder": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

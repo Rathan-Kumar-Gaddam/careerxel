@@ -1,0 +1,29 @@
+# Node
+**/node_modules/
+
+# Next.js
+.next/
+
+# Environment
+.env
+.env.*
+frontend/.env.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Build outputs
+dist/
+build/
+
+# Uploads
+public/uploads/

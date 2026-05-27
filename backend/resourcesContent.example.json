@@ -1,0 +1,22 @@
+{
+  "blog": {
+    "ribbonMeta": "FRESH · FIELD NOTES · ESSAYS",
+    "eyebrow": "BLOG",
+    "headline": "Read the latest.",
+    "mutedHeadline": "Skip the rest.",
+    "ctaLabel": "View all {count} articles",
+    "ctaHref": "/resources/blog"
+  },
+  "newsletter": {
+    "eyebrow": "NEWSLETTER",
+    "headline": "One email a month.",
+    "mutedHeadline": "No fluff. No promo.",
+    "description": "Field notes from our team, the latest essays, and the one chart from each placement report you'll actually want to read.",
+    "stat": "▢ 12,847 SUBSCRIBERS · 47% OPEN RATE",
+    "digestLabel": "Send me the monthly digest",
+    "datasetLabel": "Notify me when a new dataset is released",
+    "webinarLabel": "Webinar invites (1 per month, max)",
+    "submitLabel": "▢ SUBSCRIBE",
+    "successLabel": "✓ SUBSCRIBED"
+  }
+}

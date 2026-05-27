@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "leads",
+  "info": {
+    "singularName": "lead",
+    "pluralName": "leads",
+    "displayName": "Lead",
+    "description": "Contact, demo, and early access leads from the website"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "company": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 10
+    },
+    "role": {
+      "type": "string"
+    },
+    "audience": {
+      "type": "enumeration",
+      "default": "candidate",
+      "enum": [
+        "candidate",
+        "employer",
+        "college",
+        "partner"
+      ]
+    },
+    "message": {
+      "type": "text"
+    },
+    "source": {
+      "type": "string",
+      "default": "website"
+    }
+  }
+}
