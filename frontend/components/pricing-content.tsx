@@ -118,12 +118,8 @@ export function PricingContent({ content }: { content: PricingContentType }) {
 
       <section className="light pricing-compare">
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">01</span><span className="slash">/</span><span className="name">Compare</span></span>
-            <span className="ribbon-meta">Every feature · every tier</span>
-          </div>
           <div className="section-intro">
-            <div className="eyebrow">Compare plans</div>
+            {/* <div className="eyebrow">Compare plans</div> */}
             <h2 className="h-section" style={{ marginTop: "18px" }}>
               {content.comparison.title}
               <br />
@@ -175,13 +171,9 @@ export function PricingContent({ content }: { content: PricingContentType }) {
 
       <section className="dark-mesh pricing-enterprise">
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">02</span><span className="slash">/</span><span className="name">Enterprise</span></span>
-            <span className="ribbon-meta">Scale · custom · white-glove</span>
-          </div>
           <div className="pricing-enterprise-panel">
             <div className="pricing-enterprise-copy">
-              <div className="eyebrow">{content.enterprise.eyebrow}</div>
+              {/* <div className="eyebrow">{content.enterprise.eyebrow}</div> */}
               <h2 className="h-section pricing-enterprise-title">
                 <span className="bone-grad">{content.enterprise.headline}</span>
                 <br />
@@ -218,13 +210,10 @@ export function PricingContent({ content }: { content: PricingContentType }) {
 
       <section className="light pricing-faq">
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">03</span><span className="slash">/</span><span className="name">FAQ</span></span>
-            <span className="ribbon-meta">Pricing · billing · legal</span>
-          </div>
+         
           <div className="pricing-faq-grid">
             <div className="section-intro">
-              <div className="eyebrow">FAQ</div>
+              {/* <div className="eyebrow">FAQ</div> */}
               <h2 className="h-section" style={{ marginTop: "18px" }}>
                 Pricing,
                 <br />
@@ -246,12 +235,9 @@ export function PricingContent({ content }: { content: PricingContentType }) {
 
       <section className="cta-mesh section-edge">
         <div className="container cta-band">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">04</span><span className="slash">/</span><span className="name">Start</span></span>
-            <span className="ribbon-meta">No card required</span>
-          </div>
+          
           <div className="cta-copy">
-            <div className="eyebrow">{content.finalCta.eyebrow}</div>
+            {/* <div className="eyebrow">{content.finalCta.eyebrow}</div> */}
             <h2 className="display" style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)" }}>
               <span className="bone-grad">{content.finalCta.headline}</span>
             </h2>

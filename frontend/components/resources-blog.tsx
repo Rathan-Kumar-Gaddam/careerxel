@@ -60,16 +60,9 @@ export function ResourcesBlog({ posts, categories, blog, mode = "archive", total
       <div className="container">
         {isPreview ? (
           <>
-            <div className="sx-ribbon">
-              <span className="idx res-ribbon-light">
-                <span className="num">01</span>
-                <span className="slash">/</span>
-                <span className="name">BLOG</span>
-              </span>
-              <span className="ribbon-meta res-ribbon-meta-light">{blog.ribbonMeta}</span>
-            </div>
+            
             <div className="section-header">
-              <div className="eyebrow">{blog.eyebrow}</div>
+              {/* <div className="eyebrow">{blog.eyebrow}</div> */}
               <h2 className="h-section" style={{ marginTop: 18 }}>
                 {blog.headline}
                 <br />

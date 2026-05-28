@@ -18,14 +18,10 @@ export default function EmployersPage() {
       {/* 00 HERO */}
       <section className="dark-mesh p-hero">
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">00</span><span className="slash">/</span><span className="name">FOR EMPLOYERS</span></span>
-            <span className="ribbon-meta">HIRE WITHOUT THE CHAOS</span>
-          </div>
           <div className="p-hero-grid">
             <div className="hero-copy">
               <div className="serif-kicker">Hiring, without the chaos.</div>
-              <div className="eyebrow">FOR EMPLOYERS</div>
+              {/* <div className="eyebrow">FOR EMPLOYERS</div> */}
               <h1 className="display">
                 <span className="bone-grad">Source. Screen. Hire.</span>
                 <br />
@@ -33,11 +29,10 @@ export default function EmployersPage() {
               </h1>
               <p className="lead">A full-stack ATS with AI mock interviews and proctoring built in. Configure once, hire 24/7 — and trust the scoring.</p>
               <div className="hero-cta">
-                <Link className="btn btn-primary" href="/pricing">
-                  Start free trial
+                <Link className="btn btn-primary" href="/contact">
+                  Contact us
                   <svg className="icon" viewBox="0 0 20 20" stroke="currentColor" fill="none"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M5 10h10M11 6l4 4-4 4" /></svg>
                 </Link>
-                <Link className="btn btn-ghost" href="/contact">Contact us</Link>
               </div>
             </div>
             <div className="p-hero-mock">
@@ -72,15 +67,15 @@ export default function EmployersPage() {
                   </div>
                 </div>
               </div>
-              <div className="frag" style={{ top: "8%", left: "-22%", transform: "rotate(-5deg)", maxWidth: "220px", pointerEvents: "none" }}>
+              {/* <div className="frag" style={{ top: "8%", left: "-22%", transform: "rotate(-5deg)", maxWidth: "220px", pointerEvents: "none" }}>
                 <div className="mono" style={{ color: "var(--amber)", marginBottom: "4px" }}>▢ HIRE REC</div>
                 <div style={{ fontSize: "14px", fontWeight: 500 }}>STRONG · 92/100</div>
-              </div>
-              <div className="frag" style={{ bottom: "10%", right: "-18%", transform: "rotate(4deg)", maxWidth: "220px", pointerEvents: "none" }}>
+              </div> */}
+              {/* <div className="frag" style={{ bottom: "10%", right: "-18%", transform: "rotate(4deg)", maxWidth: "220px", pointerEvents: "none" }}>
                 <div className="mono" style={{ color: "var(--d-3)", marginBottom: "4px" }}>▢ INTERVIEW</div>
                 <div style={{ fontSize: "13px", color: "var(--d-1)" }}>Tomorrow · 14:00 IST</div>
                 <div style={{ fontSize: "11px", color: "var(--d-3)", marginTop: "2px" }}>P. Khurana · Sr Frontend</div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -89,12 +84,8 @@ export default function EmployersPage() {
       {/* 01 POSTINGS */}
       <section className="dark-mesh section">
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">01</span><span className="slash">/</span><span className="name">POSTINGS</span></span>
-            <span className="ribbon-meta">EDITOR · PUBLIC PAGE</span>
-          </div>
           <div className="section-header">
-            <div className="eyebrow">POSTINGS</div>
+            {/* <div className="eyebrow">POSTINGS</div> */}
             <h2 className="h-section" style={{ marginTop: "18px" }}>
               Job posts that look
               <br />
@@ -150,12 +141,8 @@ export default function EmployersPage() {
       {/* 02 ATS */}
       <section className="light section">
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">02</span><span className="slash">/</span><span className="name">ATS</span></span>
-            <span className="ribbon-meta">EVERY APPLICANT · IN CONTEXT</span>
-          </div>
           <div className="section-header">
-            <div className="eyebrow">ATS</div>
+            {/* <div className="eyebrow">ATS</div> */}
             <h2 className="h-section" style={{ marginTop: "18px" }}>
               Every applicant,
               <br />
@@ -198,10 +185,10 @@ export default function EmployersPage() {
               <div className="row"><div className="nm">A. Patel</div><div className="role">Sr Frontend</div><div className="stat">APPLIED</div><div className="score">81</div><div className="stat">▶</div></div>
               <div className="row"><div className="nm">J. Lee</div><div className="role">Sr Frontend</div><div className="stat">SCREEN 2</div><div className="score">85</div><div className="stat">▶</div></div>
             </div>
-            <div className="frag" style={{ background: "rgba(252,250,246,0.85)", color: "var(--l-1)", borderColor: "var(--border-l)", top: "12%", right: "-10%", transform: "rotate(4deg)", maxWidth: "220px", pointerEvents: "none" }}>
+            {/* <div className="frag" style={{ background: "rgba(252,250,246,0.85)", color: "var(--l-1)", borderColor: "var(--border-l)", top: "12%", right: "-10%", transform: "rotate(4deg)", maxWidth: "220px", pointerEvents: "none" }}>
               <div className="mono" style={{ color: "var(--burnt)", marginBottom: "4px" }}>▢ BULK UPLOAD</div>
               <div style={{ fontSize: "13px", fontWeight: 500 }}>247 resumes · 92% parsed</div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -209,12 +196,8 @@ export default function EmployersPage() {
       {/* 03 PIPELINE */}
       <section className="dark-mesh section">
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">03</span><span className="slash">/</span><span className="name">PIPELINE</span></span>
-            <span className="ribbon-meta">SLOTS · CALENDAR · OFFER</span>
-          </div>
           <div className="section-header">
-            <div className="eyebrow">PIPELINE</div>
+            {/* <div className="eyebrow">PIPELINE</div> */}
             <h2 className="h-section" style={{ marginTop: "18px" }}>
               From slot
               <br />
@@ -285,12 +268,8 @@ export default function EmployersPage() {
       {/* 04 AI INTERVIEWS */}
       <section className="dark-mesh section-featured">
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">04</span><span className="slash">/</span><span className="name">AI INTERVIEWS</span></span>
-            <span style={{ color: "var(--amber)" }}>FEATURED · CENTERPIECE</span>
-          </div>
           <div className="serif-kicker">The interview, automated.</div>
-          <div className="eyebrow" style={{ marginTop: "18px" }}>AI INTERVIEWS · FEATURED</div>
+          {/* <div className="eyebrow" style={{ marginTop: "18px" }}>AI INTERVIEWS · FEATURED</div> */}
           <h2 className="display display-featured" style={{ marginTop: "24px" }}>
             <span className="bone-grad">Run technical interviews 24/7.</span>
             <br />
@@ -370,12 +349,8 @@ export default function EmployersPage() {
       {/* 05 REUSABILITY */}
       <section className="light section">
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">05</span><span className="slash">/</span><span className="name">REUSABILITY</span></span>
-            <span className="ribbon-meta">TEMPLATES · QUESTION BANKS · EMAILS</span>
-          </div>
           <div className="section-header">
-            <div className="eyebrow">REUSABILITY</div>
+            {/* <div className="eyebrow">REUSABILITY</div> */}
             <h2 className="h-section" style={{ marginTop: "18px" }}>
               Templates that scale
               <br />
@@ -411,12 +386,8 @@ export default function EmployersPage() {
       {/* 06 ANALYTICS */}
       <section className="dark-mesh section">
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">06</span><span className="slash">/</span><span className="name">ANALYTICS</span></span>
-            <span className="ribbon-meta">FUNNEL · VELOCITY · SOURCES</span>
-          </div>
           <div className="section-header">
-            <div className="eyebrow">ANALYTICS</div>
+            {/* <div className="eyebrow">ANALYTICS</div> */}
             <h2 className="h-section" style={{ marginTop: "18px" }}>
               Numbers your leadership
               <br />
@@ -486,12 +457,8 @@ export default function EmployersPage() {
       {/* 07 CTA */}
       <section className="cta-mesh section-edge" style={{ position: "relative", overflow: "hidden" }}>
         <div className="container cta-band">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">07</span><span className="slash">/</span><span className="name">GET STARTED</span></span>
-            <span className="ribbon-meta">30-DAY FREE TRIAL</span>
-          </div>
           <div className="cta-copy">
-            <div className="eyebrow">START FREE TRIAL</div>
+            {/* <div className="eyebrow">START FREE TRIAL</div> */}
             <h2 className="display" style={{ fontSize: "clamp(48px, 6.5vw, 80px)" }}>
               <span className="bone-grad">See CareerXel for your team.</span>
             </h2>
@@ -500,7 +467,6 @@ export default function EmployersPage() {
             </p>
             <div className="hero-cta hero-cta--center">
               <Link className="btn btn-primary" href="/contact">Book a demo</Link>
-              <Link className="btn btn-ghost" href="/pricing">Start free trial</Link>
             </div>
           </div>
         </div>

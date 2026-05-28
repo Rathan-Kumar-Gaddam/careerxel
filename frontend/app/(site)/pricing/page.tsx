@@ -23,13 +23,8 @@ export default async function PricingPage() {
     <main className="relative">
       <section className="dark-mesh p-hero section-tight">
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">00</span><span className="slash">/</span><span className="name">{page.eyebrow}</span></span>
-            <span className="ribbon-meta">HONEST · ITEMIZED · NO LOCK-IN</span>
-          </div>
           <div className="hero-copy hero-copy--center" style={{ maxWidth: "48rem", margin: "0 auto" }}>
             <div className="serif-kicker">{page.kicker}</div>
-            <div className="eyebrow">{page.eyebrow}</div>
             <h1 className="display">
               <span className="bone-grad">{page.headline}</span><br />
               <span className="muted-weight">{page.mutedHeadline}</span>

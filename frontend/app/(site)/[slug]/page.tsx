@@ -38,20 +38,17 @@ export default async function DynamicPage({ params }: Props) {
   const page = await getPage(slug);
   const primaryHref = ctaHref(page.primaryCta, "/pricing");
   const secondaryHref = ctaHref(page.secondaryCta, "/resources");
+  const showSecondary = slug !== "about";
 
   return (
     <main className="relative">
       {/* 00 HERO */}
       <section className="dark-mesh hero">
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">00</span><span className="slash">/</span><span className="name">{page.eyebrow}</span></span>
-            <span className="ribbon-meta">CAREERXEL.COM · 2026</span>
-          </div>
           <div className="hero-grid">
             <div className="hero-copy">
               <div className="serif-kicker">{page.kicker}</div>
-              <div className="eyebrow">{page.eyebrow}</div>
+              {/* <div className="eyebrow">{page.eyebrow}</div> */}
               <h1 className="display">
                 <span className="bone-grad">{page.headline}</span><br />
                 <span className="muted-weight">{page.mutedHeadline}</span>
@@ -59,7 +56,7 @@ export default async function DynamicPage({ params }: Props) {
               <p className="lead">{page.description}</p>
               <div className="hero-cta">
                 <Link className="btn btn-primary" href={primaryHref}>{page.primaryCta}</Link>
-                <Link className="btn btn-ghost" href={secondaryHref}>{page.secondaryCta}</Link>
+                {showSecondary && <Link className="btn btn-ghost" href={secondaryHref}>{page.secondaryCta}</Link>}
               </div>
             </div>
             
@@ -114,20 +111,16 @@ export default async function DynamicPage({ params }: Props) {
       {/* 01 CAPABILITIES */}
       <section className="light section">
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">01</span><span className="slash">/</span><span className="name">Capabilities</span></span>
-            <span className="ribbon-meta">{page.title} · PRODUCT DEPTH</span>
-          </div>
-          <div className="grid gap-5 lg:grid-cols-3">
+          <div className="dynamic-feature-grid">
             {page.features.map((feature, index) => {
               const Icon = index === 0 ? Sparkles : index === 1 ? CheckCircle2 : BarChart3;
               return (
-                <article key={feature.title} className="card-l" style={{ padding: "28px", display: "flex", flexDirection: "column", justifyContent: "space-between", minHeight: "220px" }}>
+                <article key={feature.title} className="card-l dynamic-feature-card">
                   <div>
-                    <Icon className="icon" style={{ width: "24px", height: "24px", strokeWidth: "1.5", color: "var(--amber)" }} />
-                    <div className="mono" style={{ marginTop: "16px", color: "var(--l-2)", border: "1px solid var(--border-l)", borderRadius: "999px", padding: "4px 8px", display: "inline-flex", fontSize: "9px", letterSpacing: "0.12em", textTransform: "uppercase" }}>{feature.tag}</div>
-                    <h3 style={{ marginTop: "16px", fontSize: "20px", fontWeight: 500, letterSpacing: "-0.015em", color: "var(--l-1)" }}>{feature.title}</h3>
-                    <p style={{ marginTop: "8px", fontSize: "14px", color: "var(--l-2)", lineHeight: "1.55" }}>{feature.text}</p>
+                    <Icon className="icon dynamic-feature-icon" />
+                    <div className="mono dynamic-feature-tag">{feature.tag}</div>
+                    <h3>{feature.title}</h3>
+                    <p>{feature.text}</p>
                   </div>
                 </article>
               );
@@ -139,13 +132,9 @@ export default async function DynamicPage({ params }: Props) {
       {/* 02 OPERATING MODEL */}
       <section className="dark-mesh section">
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">02</span><span className="slash">/</span><span className="name">Operating model</span></span>
-            <span className="ribbon-meta">Signals · Dashboards · Outcomes</span>
-          </div>
-          <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+          <div className="dynamic-model-grid">
             <div className="section-intro">
-              <div className="eyebrow">See it in motion</div>
+              {/* <div className="eyebrow">See it in motion</div> */}
               <h2 className="h-section">
                 Every signal connected to <br /><span className="muted-weight">the next decision.</span>
               </h2>
@@ -153,15 +142,15 @@ export default async function DynamicPage({ params }: Props) {
                 CareerXel keeps candidates, recruiters, and placement teams aligned across profiles, interviews, applications, schedules, offers, and outcome reporting.
               </p>
             </div>
-            <div className="card-d shadow-glow" style={{ padding: "18px" }}>
-              <div className="grid gap-3.5 sm:grid-cols-2">
+            <div className="card-d dynamic-metric-panel">
+              <div className="dynamic-metric-grid">
                 {["Readiness", "Pipeline", "Interviews", "Offers"].map((label, index) => (
-                  <div key={label} className="card-d" style={{ padding: "18px", background: "var(--surface-2)" }}>
-                    <div className="mono" style={{ color: "var(--d-3)", fontSize: "9px" }}>{label}</div>
-                    <div className="bar" style={{ height: "4px", background: "var(--surface-3)", borderRadius: "2px", marginTop: "12px" }}>
-                      <div style={{ height: "100%", borderRadius: "2px", background: "var(--amber)", width: `${82 - index * 12}%` }} />
+                  <div key={label} className="card-d dynamic-metric-card">
+                    <div className="mono dynamic-metric-label">{label}</div>
+                    <div className="dynamic-metric-bar">
+                      <div style={{ width: `${82 - index * 12}%` }} />
                     </div>
-                    <div style={{ marginTop: "14px", fontSize: "22px", fontWeight: 500, color: "var(--d-1)" }}>{82 - index * 12}%</div>
+                    <div className="dynamic-metric-value">{82 - index * 12}%</div>
                   </div>
                 ))}
               </div>
@@ -173,12 +162,8 @@ export default async function DynamicPage({ params }: Props) {
       {/* 03 CTA */}
       <section className="cta-mesh section-edge" style={{ position: "relative", overflow: "hidden" }}>
         <div className="container cta-band">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">03</span><span className="slash">/</span><span className="name">GET STARTED</span></span>
-            <span className="ribbon-meta">NO CARD · NO COMMITMENT</span>
-          </div>
           <div className="cta-copy">
-            <div className="eyebrow">{page.eyebrow}</div>
+            {/* <div className="eyebrow">{page.eyebrow}</div> */}
             <h2 className="display" style={{ fontSize: "clamp(48px, 6.5vw, 80px)" }}>
               <span className="bone-grad">Bring CareerXel into</span>{" "}
               <span className="muted-weight">your workflow.</span>
@@ -186,7 +171,7 @@ export default async function DynamicPage({ params }: Props) {
             <p className="lead lead--center">Start free today — upgrade when your team is ready.</p>
             <div className="hero-cta hero-cta--center">
               <Link className="btn btn-primary" href={primaryHref}>{page.primaryCta}</Link>
-              <Link className="btn btn-ghost" href="/contact">Contact us</Link>
+              {showSecondary && <Link className="btn btn-ghost" href="/contact">Contact us</Link>}
             </div>
           </div>
         </div>

@@ -33,16 +33,7 @@ export default async function ResourcesBlogArchivePage() {
             <span aria-current="page">Blog</span>
           </nav>
 
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">01</span>
-              <span className="slash">/</span>
-              <span className="name">BLOG</span>
-            </span>
-            <span className="ribbon-meta">{blog.ribbonMeta}</span>
-          </div>
-
           <div className="serif-kicker">The full archive.</div>
-          <div className="eyebrow res-blog-archive-eyebrow">ALL ARTICLES</div>
           <h1 className="display res-blog-archive-title">
             <span className="bone-grad">Every essay,</span>
             <br />

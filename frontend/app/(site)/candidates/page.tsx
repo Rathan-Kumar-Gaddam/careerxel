@@ -18,24 +18,19 @@ export default function CandidatesPage() {
       {/* 00 HERO */}
       <section className="dark-mesh p-hero">
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">00</span><span className="slash">/</span><span className="name">FOR CANDIDATES</span></span>
-            <span className="ribbon-meta">YOUR CAREER · YOUR CONTROL</span>
-          </div>
           <div className="p-hero-grid">
             <div className="hero-copy">
               <div className="serif-kicker">For the people doing the work.</div>
-              <div className="eyebrow">FOR CANDIDATES</div>
+              {/* <div className="eyebrow">FOR CANDIDATES</div> */}
               <h1 className="display">
                 <span className="bone-grad">Your career,</span><br />
                 <span className="muted-weight">on autopilot.</span>
               </h1>
               <p className="lead">AI-built profiles, smart matching, mock interviews you can keep failing until you don't, and learning roadmaps that actually move the needle.</p>
               <div className="hero-cta">
-                <Link className="btn btn-primary" href="/pricing">Create free account
+                <Link className="btn btn-primary" href="https://www.staging.idsjobportal.outreachtek.com/register">Create free account
                   <svg className="icon" viewBox="0 0 20 20" stroke="currentColor" fill="none"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M5 10h10M11 6l4 4-4 4"/></svg>
                 </Link>
-                <Link className="btn btn-ghost" href="/features">Tour the product</Link>
               </div>
             </div>
             <div className="p-hero-mock">
@@ -81,11 +76,11 @@ export default function CandidatesPage() {
                   </div>
                 </div>
               </div>
-              <div className="frag" style={{ top: "14%", left: "-22%", transform: "rotate(-5deg)", maxWidth: "220px", pointerEvents: "none" }}>
-                <div className="mono" style={{ color: "var(--amber)", marginBottom: "4px" }}>▢ ADVISOR</div>
+              <div className="frag" style={{ top: "44%", left: "-22%", transform: "rotate(0deg)", maxWidth: "220px", pointerEvents: "none" }}>
+                <div className="mono" style={{ color: "var(--amber)", marginBottom: "4px" }}>ADVISOR</div>
                 <div style={{ fontSize: "13px", color: "var(--d-1)" }}>Let's review your week →</div>
               </div>
-              <div className="frag" style={{ bottom: "6%", right: "-18%", transform: "rotate(4deg)", maxWidth: "220px", pointerEvents: "none" }}>
+              <div className="frag" style={{ bottom: "6%", right: "-18%", transform: "rotate(0deg)", maxWidth: "220px", pointerEvents: "none" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
                   <svg width="22" height="22" viewBox="0 0 36 36">
                     <circle cx="18" cy="18" r="14" stroke="rgba(180,210,255,0.12)" strokeWidth="3" fill="none"/>
@@ -105,13 +100,9 @@ export default function CandidatesPage() {
       {/* 01 RESUME OS */}
       <section className="dark-mesh section">
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">01</span><span className="slash">/</span><span className="name">RESUME OS</span></span>
-            <span className="ribbon-meta">ONE RESUME · MANY ROLES</span>
-          </div>
           <div className="two-asym">
             <div className="section-intro">
-              <div className="eyebrow">RESUME OS</div>
+              {/* <div className="eyebrow">RESUME OS</div> */}
               <h2 className="h-section">
                 Resumes that adapt<br />
                 <span className="muted-weight">to every role.</span>
@@ -125,17 +116,17 @@ export default function CandidatesPage() {
               </div>
               <div className="cols" style={{ height: "calc(100% - 32px)" }}>
                 <div className="nav-c">
-                  <div className="li on">▢ HEADER</div>
-                  <div className="li">▢ SUMMARY</div>
-                  <div className="li">▢ EXPERIENCE</div>
-                  <div className="li">▢ PROJECTS</div>
-                  <div className="li">▢ SKILLS</div>
-                  <div className="li">▢ EDUCATION</div>
-                  <div className="li">▢ CERTS</div>
+                  <div className="li on">HEADER</div>
+                  <div className="li">SUMMARY</div>
+                  <div className="li">EXPERIENCE</div>
+                  <div className="li">PROJECTS</div>
+                  <div className="li">SKILLS</div>
+                  <div className="li">EDUCATION</div>
+                  <div className="li">CERTS</div>
                 </div>
                 <div className="ed">
                   <div className="opt">
-                    <div className="lab">▢ OPTIMIZE FOR</div>
+                    <div className="lab">OPTIMIZE FOR</div>
                     <div className="v">Senior Frontend Engineer · Stripe</div>
                   </div>
                   <div className="field"><div className="l">FULL NAME</div><div className="v">Priya Khurana</div></div>
@@ -165,10 +156,6 @@ export default function CandidatesPage() {
       {/* 02 DISCOVERY (light) */}
       <section className="light section">
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">02</span><span className="slash">/</span><span className="name">DISCOVERY</span></span>
-            <span className="ribbon-meta">FILTERS · MATCHES · SAVED</span>
-          </div>
           <div className="two-asym-rev">
             <div className="mock-l search-mock" style={{ position: "relative" }}>
               <div className="mock-bar">
@@ -214,16 +201,10 @@ export default function CandidatesPage() {
                   </div>
                 </div>
               </div>
-              <div className="frag frag-light" style={{ top: "16%", right: "-14%", transform: "rotate(4deg)", maxWidth: "200px", pointerEvents: "none" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                  <span className="pulse-dot" style={{ width: "6px", height: "6px" }}></span>
-                  <div className="mono" style={{ color: "var(--burnt)" }}>▢ MATCHES</div>
-                </div>
-                <div style={{ fontSize: "13px", marginTop: "4px", fontWeight: 500 }}>12 new today</div>
-              </div>
+            
             </div>
             <div className="section-intro">
-              <div className="eyebrow">DISCOVERY</div>
+              {/* <div className="eyebrow">DISCOVERY</div> */}
               <h2 className="h-section">
                 Find roles built for you,<br />
                 <span className="muted-weight">not for everyone.</span>
@@ -242,12 +223,8 @@ export default function CandidatesPage() {
       {/* 03 INTERVIEW LAB FEATURED */}
       <section className="dark-mesh section">
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">03</span><span className="slash">/</span><span className="name">INTERVIEW LAB</span></span>
-            <span className="ribbon-meta">FEATURED · CENTERPIECE</span>
-          </div>
           <div className="section-header">
-            <div className="eyebrow">INTERVIEW LAB</div>
+            {/* <div className="eyebrow">INTERVIEW LAB</div> */}
             <h2 className="h-section" style={{ marginTop: "18px" }}>
               Practice like<br /><span className="muted-weight">it's the real thing.</span>
             </h2>
@@ -260,7 +237,7 @@ export default function CandidatesPage() {
             </div>
             <div className="iv-grid" style={{ height: "calc(100% - 32px)" }}>
               <div className="pane">
-                <h6>▢ EDITOR · TYPESCRIPT</h6>
+                <h6>EDITOR · TYPESCRIPT</h6>
                 <div className="code">
                   <div><span className="kw">function</span> rateLimiter(<span className="st">key</span>: string) &#123;</div>
                   <div>&nbsp;&nbsp;<span className="kw">const</span> now = Date.now();</div>
@@ -274,7 +251,7 @@ export default function CandidatesPage() {
                 </div>
               </div>
               <div className="pane">
-                <h6>▢ AI INTERVIEWER</h6>
+                <h6>AI INTERVIEWER</h6>
                 <div className="qbox">
                   <div className="mono" style={{ color: "var(--amber)", marginBottom: "8px" }}>Q.07 / 12</div>
                   <div className="q">Walk me through how you'd design a token-bucket rate limiter for a public API serving 10M req/min. What are the failure modes?</div>
@@ -285,7 +262,7 @@ export default function CandidatesPage() {
                 </div>
               </div>
               <div className="pane">
-                <h6>▢ LIVE SCORE</h6>
+                <h6>LIVE SCORE</h6>
                 <div className="gauge">
                   <div className="gh"><span>TECHNICAL</span><span>82</span></div>
                   <div className="bar"><div style={{ width: "82%" }}></div></div>
@@ -299,7 +276,7 @@ export default function CandidatesPage() {
                   <div className="bar"><div style={{ width: "78%" }}></div></div>
                 </div>
                 <div style={{ marginTop: "14px", padding: "10px", background: "rgba(74,139,255,0.06)", border: "1px solid rgba(74,139,255,0.3)", borderRadius: "8px" }}>
-                  <div className="mono" style={{ color: "var(--amber)", fontSize: "9px" }}>▢ HIRE REC</div>
+                  <div className="mono" style={{ color: "var(--amber)", fontSize: "9px" }}>HIRE REC</div>
                   <div style={{ fontSize: "14px", fontWeight: 500, marginTop: "4px" }}>STRONG · 92/100</div>
                 </div>
                 <div style={{ flex: 1 }}></div>
@@ -319,13 +296,9 @@ export default function CandidatesPage() {
       {/* 04 GROWTH */}
       <section className="light section">
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">04</span><span className="slash">/</span><span className="name">GROWTH</span></span>
-            <span className="ribbon-meta">ADVISOR · ROADMAPS · LMS</span>
-          </div>
           <div className="two-asym">
             <div className="section-intro">
-              <div className="eyebrow">GROWTH</div>
+              {/* <div className="eyebrow">GROWTH</div> */}
               <h2 className="h-section">
                 Learn what actually<br />
                 <span className="muted-weight">moves the needle.</span>
@@ -414,12 +387,8 @@ export default function CandidatesPage() {
       {/* 05 COMMAND CENTER */}
       <section className="dark-mesh section">
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">05</span><span className="slash">/</span><span className="name">COMMAND CENTER</span></span>
-            <span className="ribbon-meta">EVERYTHING IN ONE VIEW</span>
-          </div>
           <div className="section-header">
-            <div className="eyebrow">COMMAND CENTER</div>
+            {/* <div className="eyebrow">COMMAND CENTER</div> */}
             <h2 className="h-section" style={{ marginTop: "18px" }}>
               Every application,<br /><span className="muted-weight">every interview, in one view.</span>
             </h2>
@@ -449,7 +418,7 @@ export default function CandidatesPage() {
             </div>
             <div className="body" style={{ flex: 1, minHeight: "200px" }}>
               <div className="col">
-                <h6>▢ PIPELINE</h6>
+                <h6>PIPELINE</h6>
                 <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
                   <div style={{ background: "var(--surface-2)", border: "1px solid var(--border-d)", borderRadius: "8px", padding: "8px 10px", display: "flex", justifyContent: "space-between" }}><span style={{ fontSize: "11px" }}>Stripe — SR FE</span><span className="mono" style={{ color: "var(--amber)", fontSize: "9px" }}>OFFER</span></div>
                   <div style={{ background: "var(--surface-2)", border: "1px solid var(--border-d)", borderRadius: "8px", padding: "8px 10px", display: "flex", justifyContent: "space-between" }}><span style={{ fontSize: "11px" }}>Linear — Design Eng</span><span className="mono" style={{ color: "var(--d-2)", fontSize: "9px" }}>INTERVIEW</span></div>
@@ -458,7 +427,7 @@ export default function CandidatesPage() {
                 </div>
               </div>
               <div className="col">
-                <h6>▢ MONTHLY TRENDS</h6>
+                <h6>MONTHLY TRENDS</h6>
                 <svg viewBox="0 0 240 120" style={{ width: "100%", height: "80%" }}>
                   <g stroke="rgba(180,210,255,0.06)"><line x1="0" x2="240" y1="30" y2="30"/><line x1="0" x2="240" y1="60" y2="60"/><line x1="0" x2="240" y1="90" y2="90"/></g>
                   <path d="M10 90 L50 80 L90 70 L130 50 L170 60 L210 35" stroke="#4A8BFF" strokeWidth="1.6" fill="none"/>
@@ -466,7 +435,7 @@ export default function CandidatesPage() {
                 </svg>
               </div>
               <div className="col">
-                <h6>▢ UPCOMING</h6>
+                <h6>UPCOMING</h6>
                 <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
                   <div style={{ background: "var(--surface-2)", border: "1px solid var(--border-d)", borderRadius: "8px", padding: "10px" }}>
                     <div style={{ fontSize: "11px", color: "var(--d-1)" }}>Stripe · Final Round</div>
@@ -486,12 +455,8 @@ export default function CandidatesPage() {
       {/* 06 BENTO */}
       <section className="dark-mesh section">
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">06</span><span className="slash">/</span><span className="name">AND THE REST</span></span>
-            <span className="ribbon-meta">NOTIFICATIONS · OAUTH · PORTFOLIO</span>
-          </div>
           <div className="section-header">
-            <div className="eyebrow">EVERYTHING ELSE</div>
+            {/* <div className="eyebrow">EVERYTHING ELSE</div> */}
             <h2 className="h-section" style={{ marginTop: "18px" }}>
               Plus the parts<br /><span className="muted-weight">you'd expect to be missing.</span>
             </h2>
@@ -564,12 +529,8 @@ export default function CandidatesPage() {
       {/* 07 CTA */}
       <section className="cta-mesh section-edge" style={{ position: "relative", overflow: "hidden" }}>
         <div className="container cta-band">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">07</span><span className="slash">/</span><span className="name">GET STARTED</span></span>
-            <span className="ribbon-meta">NO CARD · NO COMMITMENT</span>
-          </div>
           <div className="cta-copy">
-            <div className="eyebrow">START FREE</div>
+            {/* <div className="eyebrow">START FREE</div> */}
             <h2 className="display" style={{ fontSize: "clamp(48px, 6.5vw, 80px)" }}>
               <span className="bone-grad">Start building your career today.</span>
             </h2>
@@ -577,22 +538,14 @@ export default function CandidatesPage() {
               It takes less than five minutes. Your first AI mock interview is free.
             </p>
             <div className="hero-cta hero-cta--center">
-              <Link className="btn btn-primary" href="/pricing">
+              <Link className="btn btn-primary" href="https://www.staging.idsjobportal.outreachtek.com/register">
                 Create free account
                 <svg className="icon" viewBox="0 0 20 20" stroke="currentColor" fill="none"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M5 10h10M11 6l4 4-4 4"/></svg>
               </Link>
-              <Link className="btn btn-ghost" href="/features">Tour the product</Link>
             </div>
           </div>
         </div>
-        <div className="frag" style={{ top: "14%", left: "6%", transform: "rotate(-6deg)", pointerEvents: "none" }}>
-          <div className="mono" style={{ color: "var(--amber)" }}>▢ MATCH</div>
-          <div style={{ fontSize: "13px", marginTop: "4px" }}>96% · Stripe</div>
-        </div>
-        <div className="frag" style={{ bottom: "12%", right: "8%", transform: "rotate(4deg)", pointerEvents: "none" }}>
-          <div className="mono" style={{ color: "var(--d-3)" }}>▢ SCORE</div>
-          <div style={{ fontSize: "13px", marginTop: "4px" }}>82 / Tech</div>
-        </div>
+       
       </section>
     </main>
   );

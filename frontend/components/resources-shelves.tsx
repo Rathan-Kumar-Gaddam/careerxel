@@ -35,15 +35,9 @@ export function ResourcesShelves({ newsletter }: Props) {
   return (
     <section className="dark-mesh section">
       <div className="container">
-        <div className="sx-ribbon">
-          <span className="idx"><span className="num">02</span>
-            <span className="slash">/</span>
-            <span className="name">SHELVES</span>
-          </span>
-          <span className="ribbon-meta">GUIDES · DOCS · WEBINARS</span>
-        </div>
+       
         <div className="section-header">
-          <div className="eyebrow">RESOURCE SHELVES</div>
+          {/* <div className="eyebrow">RESOURCE SHELVES</div> */}
           <h2 className="h-section" style={{ marginTop: 18 }}>
             Browse by shelf.
             <br />

@@ -137,12 +137,10 @@ export function Nav() {
           </div>
 
           <div className="nav-actions">
-            <a className="btn btn-ghost" href="https://www.staging.idsjobportal.outreachtek.com/register">
+               <a className="btn btn-primary" href="https://www.staging.idsjobportal.outreachtek.com/register">
               Sign in
+            
             </a>
-            <Link className="btn btn-primary" href="/pricing">
-              Get started
-            </Link>
           </div>
 
           <button
@@ -196,12 +194,10 @@ export function Nav() {
           })}
         </div>
         <div className="nav-mobile-actions">
-          <a className="btn btn-ghost" href="https://www.staging.idsjobportal.outreachtek.com/register">
+           <a className="btn btn-primary" href="https://www.staging.idsjobportal.outreachtek.com/register" onClick={() => setOpen(false)}>
             Sign in
+          
           </a>
-          <Link className="btn btn-primary" href="/pricing" onClick={() => setOpen(false)}>
-            Get started
-          </Link>
         </div>
       </aside>
     </>

@@ -1,0 +1,45 @@
+{
+  "note": "All plans. No card required. Cancel anytime. Data export included.",
+  "audiences": [
+    {
+      "id": "individuals",
+      "label": "Individuals",
+      "plans": [
+        {
+          "name": "Free",
+          "monthly": "$0",
+          "annual": "$0",
+          "monthlyInr": "₹0",
+          "annualInr": "₹0",
+          "monthlyUsd": "$0",
+          "annualUsd": "$0",
+          "period": "forever",
+          "description": "Everything a candidate needs. No card. No upsells.",
+          "cta": "Start free",
+          "featureGroups": [
+            { "title": "Core", "items": ["Resume builder - 3 versions", "5 AI mock interviews / month", "Smart job matching - daily digest", "Career roadmaps - LMS SSO"] },
+            { "title": "Support", "items": ["Email - 72h", "Public help center"] }
+          ]
+        },
+        {
+          "name": "Plus",
+          "tag": "Popular",
+          "monthly": "$12",
+          "annual": "$9",
+          "monthlyInr": "₹999",
+          "annualInr": "₹749",
+          "monthlyUsd": "$12",
+          "annualUsd": "$9",
+          "period": "/ month",
+          "description": "For active job seekers running multiple tracks.",
+          "cta": "Try 14 days free",
+          "featured": true,
+          "featureGroups": [
+            { "title": "Core", "items": ["Unlimited resume versions", "Unlimited AI mock interviews", "Per-role coaching playbooks", "Behavioral interview scripts", "Salary and comp benchmarks"] },
+            { "title": "Support", "items": ["Email - 24h", "Live chat"] }
+          ]
+        }
+      ]
+    }
+  ]
+}

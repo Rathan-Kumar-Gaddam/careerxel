@@ -365,12 +365,23 @@ function isPricingContent(value: unknown): value is PricingContent {
 
 export async function getPricingPage(): Promise<PricingPageContent> {
   const page = await getPage("pricing");
-  const pricingContent = isPricingContent((page as any).pricingContent)
-    ? (page as any).pricingContent
-    : fallbackPricingContent;
+  const cmsPricingContent = (page as any).pricingContent;
+
+  if (!isPricingContent(cmsPricingContent)) {
+    if (process.env.NODE_ENV !== "production") {
+      throw new Error(
+        "Pricing page is missing valid pricingContent from Strapi. Update the `pricing` page JSON in Strapi, or seed it from backend/pricingContent.example.json."
+      );
+    }
+
+    return {
+      ...page,
+      pricingContent: fallbackPricingContent
+    };
+  }
 
   return {
     ...page,
-    pricingContent
+    pricingContent: cmsPricingContent
   };
 }

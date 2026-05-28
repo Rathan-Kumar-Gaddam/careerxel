@@ -211,7 +211,7 @@ export function getCategoryFilters(posts: ResourceArticle[]): ResourceCategory[]
   }
 
   for (const category of categories) {
-    if (category !== "All" && !preferredOrder.includes(category as any)) {
+    if (!preferredOrder.includes(category as (typeof preferredOrder)[number])) {
       ordered.push(category);
     }
   }

@@ -23,6 +23,7 @@ export type Testimonial = {
   role: string;
   quote: string;
   company?: string;
+  displayOrder?: number;
 };
 
 export type PageContent = {
@@ -58,10 +59,10 @@ export const navItems: NavItem[] = [
       { label: "For Colleges", href: "/colleges", description: "Placement dashboards & analytics" }
     ]
   },
-  { label: "AI", href: "/ai" },
   { label: "Pricing", href: "/pricing" },
   { label: "Resources", href: "/resources" },
-  { label: "Contact us", href: "/contact" }
+  { label: "About", href: "/about" },
+  { label: "Contact ", href: "/contact" }
 ];
 
 export const homeContent = {
@@ -129,26 +130,7 @@ export const homeContent = {
     ["340K", "Mock interviews"],
     ["214", "Partner colleges"]
   ],
-  testimonials: [
-    {
-      name: "Maya Sundaram",
-      role: "Head of Talent",
-      quote: "CareerXel cut our time-to-hire nearly in half. The AI scoring is the clearest part of our pipeline.",
-      company: "Helix"
-    },
-    {
-      name: "Dr. R. Anand",
-      role: "Dean, Riverbend U",
-      quote: "For the first time our placement cell can show real numbers, not anecdotes.",
-      company: "Riverbend U"
-    },
-    {
-      name: "Priya Khurana",
-      role: "SWE @ Quanta",
-      quote: "I practiced 40 mock interviews before my first real one. I walked in ready.",
-      company: "Quanta"
-    }
-  ]
+  testimonials: []
 };
 
 export const pages: Record<string, PageContent> = {

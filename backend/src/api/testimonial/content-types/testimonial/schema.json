@@ -26,6 +26,10 @@
       "type": "text",
       "required": true
     },
+    "displayOrder": {
+      "type": "integer",
+      "min": 1
+    },
     "page": {
       "type": "relation",
       "relation": "manyToOne",

@@ -1,7 +1,9 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
 
+import { TestimonialsPreview } from "@/components/testimonials-preview";
 import { homeContent, type Testimonial } from "@/lib/content";
+import { getPage } from "@/lib/strapi";
 
 export const metadata: Metadata = {
   title: "CareerXel — Hire smarter. Grow faster.",
@@ -14,22 +16,21 @@ export const metadata: Metadata = {
   }
 };
 
-export default function HomePage() {
-  const testimonials: Testimonial[] = homeContent.testimonials;
+export default async function HomePage() {
+  const page = await getPage("home");
+  const testimonials: Testimonial[] = page.testimonials?.length
+    ? page.testimonials
+    : homeContent.testimonials;
 
   return (
     <main className="relative">
       {/* 00 HERO */}
       <section className="dark-mesh hero">
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">00</span><span className="slash">/</span><span className="name">OVERVIEW</span></span>
-            <span className="ribbon-meta">CAREERXEL.COM · 2026</span>
-          </div>
           <div className="hero-grid">
             <div className="hero-copy">
               <div className="serif-kicker">A career platform, reimagined.</div>
-              <div className="eyebrow">AI-NATIVE CAREER PLATFORM</div>
+              {/* <div className="eyebrow">AI-NATIVE CAREER PLATFORM</div> */}
               <h1 className="display">
                 <span className="bone-grad">Hire smarter.</span><br />
                 <span className="muted-weight">Grow faster.</span>
@@ -38,10 +39,9 @@ export default function HomePage() {
                 One platform for candidates, employers, and colleges — with AI mock interviews, full-stack ATS, and placement analytics that actually move the needle.
               </p>
               <div className="hero-cta">
-                <Link className="btn btn-primary" href="/pricing">Start free
+                <Link className="btn btn-primary" href="/contact">Book a demo
                   <svg className="icon" viewBox="0 0 20 20" stroke="currentColor" fill="none"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M5 10h10M11 6l4 4-4 4"/></svg>
                 </Link>
-                <Link className="btn btn-ghost" href="/contact">Book a demo</Link>
               </div>
               <div className="micro-stats">
                 <div><strong>10K+</strong> JOBS</div>
@@ -111,7 +111,7 @@ export default function HomePage() {
               </div>
               {/* Floating fragments */}
               <div className="frag frag-pos-1" style={{ pointerEvents: "none" }}>
-                <div className="mono" style={{ color: "var(--amber)", marginBottom: "4px" }}>▢ ADVISOR</div>
+                <div className="mono" style={{ color: "var(--amber)", marginBottom: "4px" }}> ADVISOR</div>
                 <div style={{ fontSize: "12px", color: "var(--d-1)", maxWidth: "160px" }}>Let's review your week →</div>
               </div>
               <div className="frag frag-pos-2" style={{ pointerEvents: "none" }}>
@@ -134,12 +134,12 @@ export default function HomePage() {
       {/* LOGO STRIP */}
       <div className="logos">
         <div className="container logos-inner">
-          <div className="eyebrow lab">TRUSTED BY TEAMS AT</div>
+          {/* <div className="eyebrow lab">TRUSTED BY TEAMS AT</div> */}
           <div className="row">
             <span className="wm">Helix</span>
             <span className="wm serif">Northwell</span>
             <span className="wm italic">Quanta</span>
-            <span className="wm mono">▢ AXIOM</span>
+            <span className="wm mono">AXIOM</span>
             <span className="wm">Mercer&amp;Co</span>
             <span className="wm serif">Riverbend U</span>
           </div>
@@ -147,17 +147,13 @@ export default function HomePage() {
       </div>
 
       {/* 01 SOLUTIONS */}
-      <section className="light section">
+      <section className="light section" >
         <div className="container">
-          <div className="rule-label" style={{ marginBottom: "48px" }}>SOLUTIONS</div>
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">01</span><span className="slash">/</span><span className="name">SOLUTIONS</span></span>
-            <span style={{ fontFamily: "var(--font-mono)", fontSize: "11px", letterSpacing: "0.12em", textTransform: "uppercase" }}>FOUR AUDIENCES · ONE PLATFORM</span>
-          </div>
-          <div className="eyebrow" style={{ marginBottom: "18px" }}>BUILT FOR FOUR AUDIENCES</div>
-          <h2 className="h-section">
+          {/* <div className="rule-label" style={{ marginBottom: "48px" }}>SOLUTIONS</div> */}
+          {/* <div className="eyebrow" style={{ marginBottom: "18px" }}>BUILT FOR FOUR AUDIENCES</div> */}
+          <h2 className="h-section" >
             One platform.<br />
-            <span className="muted-weight">Four ways to win.</span>
+            <span className="muted-weight">Three ways to win.</span>
           </h2>
           <div className="aud-grid">
             <Link className="card-l aud-card" href="/candidates">
@@ -199,19 +195,7 @@ export default function HomePage() {
                 <span className="tag">/COLLEGES</span>
               </div>
             </Link>
-            <Link className="card-l aud-card" href="/colleges">
-              <div className="top">
-                <div className="icbox" style={{ width: "36px", height: "36px", border: "1px solid var(--border-l)", borderRadius: "8px", display: "inline-flex", alignItems: "center", justifyContent: "center", color: "var(--l-1)" }}>
-                  <svg className="icon" viewBox="0 0 20 20" stroke="currentColor" fill="none"><rect x="2" y="4" width="6" height="6" rx="1" strokeWidth="1.5"/><rect x="12" y="4" width="6" height="6" rx="1" strokeWidth="1.5"/><rect x="2" y="12" width="6" height="6" rx="1" strokeWidth="1.5"/><rect x="12" y="12" width="6" height="6" rx="1" strokeWidth="1.5"/></svg>
-                </div>
-                <h3>For College Groups</h3>
-                <p>Aggregated views, cross-college benchmarks, and group-wide placement trends.</p>
-              </div>
-              <div className="bottom">
-                <span className="learn">Learn more →</span>
-                <span className="tag">/GROUPS</span>
-              </div>
-            </Link>
+    
           </div>
         </div>
       </section>
@@ -219,11 +203,7 @@ export default function HomePage() {
       {/* 02 CAPABILITIES BENTO */}
       <section className="dark-mesh section">
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">02</span><span className="slash">/</span><span className="name">CAPABILITIES</span></span>
-            <span className="ribbon-meta">SIX MODULES · ONE GRAPH</span>
-          </div>
-          <div className="eyebrow" style={{ marginBottom: "18px" }}>CAPABILITIES</div>
+          {/* <div className="eyebrow" style={{ marginBottom: "18px" }}>CAPABILITIES</div> */}
           <h2 className="h-section">
             Everything you need.<br />
             <span className="muted-weight">Nothing you don't.</span>
@@ -327,12 +307,8 @@ export default function HomePage() {
       {/* 03 PRODUCT DEPTH */}
       <section className="dark-mesh section" style={{ position: "relative" }}>
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">03</span><span className="slash">/</span><span className="name">PRODUCT</span></span>
-            <span className="ribbon-meta">FROM FIRST CLICK TO FINAL HIRE</span>
-          </div>
           <div className="section-intro">
-            <div className="eyebrow">SEE IT IN MOTION</div>
+            {/* <div className="eyebrow">SEE IT IN MOTION</div> */}
             <h2 className="h-section" style={{ maxWidth: "920px" }}>
             From the candidate's first click<br />
             <span className="muted-weight">to the recruiter's final hire.</span>
@@ -410,24 +386,20 @@ export default function HomePage() {
         </div>
 
         {/* Floating fragment */}
-        <div className="frag" style={{ left: "4%", bottom: "8%", transform: "rotate(-3deg)", maxWidth: "220px", pointerEvents: "none" }}>
-          <div className="mono" style={{ color: "var(--d-3)", marginBottom: "4px" }}>▢ TIME-TO-HIRE</div>
+        {/* <div className="frag" style={{ left: "2%", bottom: "18%", transform: "rotate(-3deg)", maxWidth: "220px", pointerEvents: "none" }}>
+          <div className="mono" style={{ color: "var(--d-3)", marginBottom: "4px" }}> TIME-TO-HIRE</div>
           <div style={{ display: "flex", alignItems: "baseline", gap: "8px" }}>
             <span style={{ fontSize: "28px", fontWeight: 500, letterSpacing: "-0.02em" }}>14d</span>
             <span style={{ fontFamily: "var(--font-mono)", fontSize: "11px", color: "var(--amber)", letterSpacing: "0.10em" }}>↓ 42%</span>
           </div>
-        </div>
+        </div> */}
       </section>
 
       {/* 04 HOW IT WORKS */}
       <section className="light section">
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">04</span><span className="slash">/</span><span className="name">WORKFLOW</span></span>
-            <span className="ribbon-meta">PROFILE → MATCH → PLACEMENT</span>
-          </div>
           <div className="section-intro">
-            <div className="eyebrow">HOW IT WORKS</div>
+            {/* <div className="eyebrow">HOW IT WORKS</div> */}
             <h2 className="h-section" style={{ maxWidth: "760px" }}>
             From profile<br /><span className="muted-weight">to placement.</span>
             </h2>
@@ -439,13 +411,13 @@ export default function HomePage() {
               <h4>Build your profile.</h4>
               <p>AI parses your resume, fills your profile, and asks the right follow-up questions.</p>
             </div>
-            <div className="conn"></div>
+            {/* <div className="conn"></div> */}
             <div className="stp">
               <div className="num">02</div>
               <h4>Match &amp; practice.</h4>
               <p>Smart matching finds roles. Mock interviews score you and tell you what to fix.</p>
             </div>
-            <div className="conn"></div>
+            {/* <div className="conn"></div> */}
             <div className="stp">
               <div className="num">03</div>
               <h4>Get placed.</h4>
@@ -458,12 +430,8 @@ export default function HomePage() {
       {/* 05 STATS */}
       <section className="dark-mesh section">
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">05</span><span className="slash">/</span><span className="name">NUMBERS</span></span>
-            <span className="ribbon-meta">UPDATED Q2 2026</span>
-          </div>
           <div className="section-intro">
-            <div className="eyebrow">BY THE NUMBERS</div>
+            {/* <div className="eyebrow">BY THE NUMBERS</div> */}
             <h2 className="h-section" style={{ maxWidth: "760px" }}>The platform, in numbers.</h2>
           </div>
           <div className="stats">
@@ -490,42 +458,20 @@ export default function HomePage() {
       {/* 06 TESTIMONIALS */}
       <section className="light section">
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">06</span><span className="slash">/</span><span className="name">VOICES</span></span>
-            <span className="ribbon-meta">FROM THE FIELD</span>
-          </div>
           <div className="section-intro">
-            <div className="eyebrow">TESTIMONIALS</div>
+            {/* <div className="eyebrow">TESTIMONIALS</div> */}
             <h2 className="h-section">What teams say.</h2>
           </div>
 
-          <div className="quotes">
-            {testimonials.map((testimonial, index) => (
-              <div key={`${testimonial.name}-${index}`} className="card-l quote-card">
-                <div className="qmark">“</div>
-                <p className="q">{testimonial.quote}</p>
-                <div className="meta">
-                  <div className="who">
-                    <div className="name">{testimonial.name}</div>
-                    <div className="role">{testimonial.role}</div>
-                  </div>
-                  {testimonial.company ? <div className="co">▢ {testimonial.company}</div> : null}
-                </div>
-              </div>
-            ))}
-          </div>
+          <TestimonialsPreview testimonials={testimonials} />
         </div>
       </section>
 
       {/* 07 CTA */}
       <section className="cta-mesh section-edge" style={{ position: "relative", overflow: "hidden" }}>
         <div className="container cta-band">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">07</span><span className="slash">/</span><span className="name">GET STARTED</span></span>
-            <span className="ribbon-meta">NO CARD · NO COMMITMENT</span>
-          </div>
           <div className="cta-copy">
-            <div className="eyebrow">START FREE</div>
+            {/* <div className="eyebrow">START FREE</div> */}
             <h2 className="display" style={{ fontSize: "clamp(48px, 6.5vw, 80px)" }}>
               <span className="bone-grad">Get started in minutes.</span>
             </h2>
@@ -533,25 +479,24 @@ export default function HomePage() {
               Create your account today. Your first AI mock interview takes less than five minutes.
             </p>
             <div className="hero-cta hero-cta--center">
-            <Link className="btn btn-primary" href="/pricing">
-              Create your account
+            <Link className="btn btn-primary" href="/contact">
+              Contact us
               <svg className="icon" viewBox="0 0 20 20" stroke="currentColor" fill="none"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M5 10h10M11 6l4 4-4 4"/></svg>
             </Link>
-            <Link className="btn btn-ghost" href="/contact">Contact us</Link>
             </div>
           </div>
         </div>
 
-        <div className="frag" style={{ top: "14%", left: "6%", transform: "rotate(-7deg)", maxWidth: "200px", opacity: 0.85, pointerEvents: "none" }}>
-          <div className="mono" style={{ color: "var(--amber)", marginBottom: "4px" }}>▢ HIRE REC</div>
+        {/* <div className="frag" style={{ top: "14%", left: "6%", transform: "rotate(-7deg)", maxWidth: "200px", opacity: 0.85, pointerEvents: "none" }}>
+          <div className="mono" style={{ color: "var(--amber)", marginBottom: "4px" }}> HIRE REC</div>
           <div style={{ fontSize: "13px", fontWeight: 500 }}>STRONG · 92/100</div>
         </div>
         <div className="frag" style={{ top: "18%", right: "4%", transform: "rotate(5deg)", maxWidth: "200px", opacity: 0.85, pointerEvents: "none" }}>
-          <div className="mono" style={{ color: "var(--d-3)", marginBottom: "4px" }}>▢ MATCHES</div>
+          <div className="mono" style={{ color: "var(--d-3)", marginBottom: "4px" }}> MATCHES</div>
           <div style={{ fontSize: "13px" }}>12 new today</div>
         </div>
         <div className="frag" style={{ bottom: "10%", left: "10%", transform: "rotate(4deg)", maxWidth: "220px", opacity: 0.8, pointerEvents: "none" }}>
-          <div className="mono" style={{ color: "var(--d-3)", marginBottom: "6px" }}>▢ PIPELINE</div>
+          <div className="mono" style={{ color: "var(--d-3)", marginBottom: "6px" }}> PIPELINE</div>
           <div style={{ display: "flex", gap: "4px" }}>
             <span style={{ flex: 1, height: "14px", background: "var(--surface-3)", borderRadius: "3px", border: "1px solid var(--border-d)" }} />
             <span style={{ flex: 1, height: "14px", background: "var(--surface-3)", borderRadius: "3px", border: "1px solid var(--border-d)" }} />
@@ -559,9 +504,9 @@ export default function HomePage() {
           </div>
         </div>
         <div className="frag" style={{ bottom: "14%", right: "8%", transform: "rotate(-3deg)", maxWidth: "220px", opacity: 0.8, pointerEvents: "none" }}>
-          <div className="mono" style={{ color: "var(--amber)", marginBottom: "4px" }}>▢ INTERVIEW</div>
-          <div style={{ fontSize: "13px" }}>Tomorrow · 3:00 IST</div>
-        </div>
+          <div className="mono" style={{ color: "var(--amber)", marginBottom: "4px" }}> INTERVIEW</div>
+          <div style={{ fontSize: "13px" }}>Tomorrow · 14:30</div>
+        </div> */}
       </section>
     </main>
   );

@@ -25,14 +25,10 @@ export default function ContactPage() {
     <main className="relative">
       <section className="dark-mesh p-hero">
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">00</span><span className="slash">/</span><span className="name">Contact us</span></span>
-            <span className="ribbon-meta">CANDIDATES · EMPLOYERS · COLLEGES</span>
-          </div>
           <div className="contact-grid">
             <div className="hero-copy contact-copy">
               <div className="serif-kicker">Tell us where CareerXel should help.</div>
-              <div className="eyebrow">Contact us</div>
+              {/* <div className="eyebrow">Contact us</div> */}
               <h1 className="display">
                 <span className="bone-grad">Start the conversation.</span><br />
                 <span className="muted-weight">We will route it.</span>

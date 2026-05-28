@@ -26,17 +26,7 @@ export default async function ResourcesPage() {
     <main className="relative page-resources">
       <section className="dark-mesh res-hero">
         <div className="container">
-          <div className="sx-ribbon">
-            <span className="idx"><span className="num">00</span>
-              <span className="slash">/</span>
-              <span className="name">RESOURCES</span>
-            </span>
-            <span className="ribbon-meta">FIELD NOTES · GUIDES · DATA</span>
-          </div>
           <div className="serif-kicker">Field notes from the front lines.</div>
-          <div className="eyebrow" style={{ marginTop: 18 }}>
-            RESOURCES
-          </div>
           <h1 className="display mt-24" style={{ maxWidth: 1100 }}>
             <span className="bone-grad">What we&apos;ve learned</span>
             <br />

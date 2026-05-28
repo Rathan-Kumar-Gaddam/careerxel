@@ -26,9 +26,10 @@ function normalizeTestimonial(raw: unknown): Testimonial | null {
   const role = typeof attrs.role === "string" ? attrs.role : "";
   const quote = typeof attrs.quote === "string" ? attrs.quote : "";
   const company = typeof attrs.company === "string" ? attrs.company : undefined;
+  const displayOrder = typeof attrs.displayOrder === "number" ? attrs.displayOrder : undefined;
 
   if (!name || !role || !quote) return null;
-  return { name, role, quote, company };
+  return { name, role, quote, company, displayOrder };
 }
 
 function normalizeTestimonials(raw: unknown): Testimonial[] {
@@ -45,12 +46,24 @@ function normalizeTestimonials(raw: unknown): Testimonial[] {
   return [];
 }
 
+function sortTestimonials(testimonials: Testimonial[]): Testimonial[] {
+  return [...testimonials].sort((a, b) => {
+    const aOrder = a.displayOrder ?? Number.MAX_SAFE_INTEGER;
+    const bOrder = b.displayOrder ?? Number.MAX_SAFE_INTEGER;
+    return aOrder - bOrder;
+  });
+}
+
+function getTestimonialPageSlug(raw: unknown): string {
+  if (!raw || typeof raw !== "object") return "";
+  const attrs = (raw as any).attributes ?? raw;
+  const page = attrs.page?.data?.attributes ?? attrs.page?.attributes ?? attrs.page;
+  return typeof page?.slug === "string" ? page.slug : "";
+}
+
 async function fetchTestimonialsForPage(pageSlug: string, token?: string): Promise<Testimonial[]> {
   try {
-    const query = new URLSearchParams({
-      "filters[page][slug][$eq]": pageSlug,
-      populate: "*"
-    }).toString();
+    const query = new URLSearchParams({ populate: "*" }).toString();
 
     const res = await fetch(`${STRAPI_URL}/api/testimonials?${query}`, {
       next: { revalidate: 60 },
@@ -59,11 +72,24 @@ async function fetchTestimonialsForPage(pageSlug: string, token?: string): Promi
 
     if (!res.ok) return [];
     const json = await res.json();
-    const testimonials = Array.isArray((json as any)?.data) ? (json as any).data : [];
-    return testimonials.map((item: any) => normalizeTestimonial(item?.attributes ?? item)).filter(Boolean) as Testimonial[];
+    const testimonials: unknown[] = Array.isArray((json as any)?.data) ? (json as any).data : [];
+    return testimonials
+      .filter((item: unknown) => pageSlug === "home" || getTestimonialPageSlug(item) === pageSlug)
+      .map((item: any): Testimonial | null => normalizeTestimonial(item?.attributes ?? item))
+      .filter((item: Testimonial | null): item is Testimonial => Boolean(item))
+      .sort((a, b) => {
+        const aOrder = a.displayOrder ?? Number.MAX_SAFE_INTEGER;
+        const bOrder = b.displayOrder ?? Number.MAX_SAFE_INTEGER;
+        return aOrder - bOrder;
+      }) as Testimonial[];
   } catch {
     return [];
   }
+}
+
+export async function getTestimonials(): Promise<Testimonial[]> {
+  const testimonials = await fetchTestimonialsForPage("home", process.env.STRAPI_API_TOKEN);
+  return testimonials.length ? testimonials : sortTestimonials(homeContent.testimonials);
 }
 
 function normalize(data: unknown): PageContent | null {
@@ -83,7 +109,7 @@ function normalize(data: unknown): PageContent | null {
     primaryCta: attrs.primaryCta,
     secondaryCta: attrs.secondaryCta,
     features: attrs.features?.length ? attrs.features : pages[attrs.slug]?.features ?? [],
-    testimonials: normalizeTestimonials(attrs.testimonials),
+    testimonials: sortTestimonials(normalizeTestimonials(attrs.testimonials)),
     pricingContent: attrs.pricingContent,
     resourcesContent: attrs.resourcesContent
   };
@@ -123,11 +149,9 @@ export async function getPage(slug: string): Promise<PageContent> {
     const cmsPage = normalize(await res.json());
     if (!cmsPage) return fallback;
 
-    if (!cmsPage.testimonials?.length) {
+    if (slug === "home" || !cmsPage.testimonials?.length) {
       const pageTestimonials = await fetchTestimonialsForPage(slug, token);
-      if (pageTestimonials.length) {
-        cmsPage.testimonials = pageTestimonials;
-      }
+      if (pageTestimonials.length) cmsPage.testimonials = pageTestimonials;
     }
 
     return cmsPage;

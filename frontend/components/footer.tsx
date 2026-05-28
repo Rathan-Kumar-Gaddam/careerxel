@@ -1,4 +1,6 @@
-﻿import Link from "next/link";
+﻿"use client";
+
+import Link from "next/link";
 
 const columns: Array<{ title: string; links: Array<{ label: string; href: string }> }> = [
   {
@@ -6,8 +8,7 @@ const columns: Array<{ title: string; links: Array<{ label: string; href: string
     links: [
       { label: "Features", href: "/features" },
       { label: "AI & Intelligence", href: "/ai" },
-      { label: "Pricing", href: "/pricing" },
-      { label: "Changelog", href: "#" }
+      { label: "Pricing", href: "/pricing" }
     ]
   },
   {
@@ -16,7 +17,7 @@ const columns: Array<{ title: string; links: Array<{ label: string; href: string
       { label: "Candidates", href: "/candidates" },
       { label: "Employers", href: "/employers" },
       { label: "Colleges", href: "/colleges" },
-      { label: "College Groups", href: "/colleges" }
+    
     ]
   },
   {
@@ -24,17 +25,14 @@ const columns: Array<{ title: string; links: Array<{ label: string; href: string
     links: [
       { label: "Blog", href: "/resources" },
       { label: "Help Center", href: "/resources" },
-      { label: "Guides", href: "/resources" },
-      { label: "API Docs", href: "#" }
+      { label: "Guides", href: "/resources" }
     ]
   },
   {
     title: "Company",
     links: [
       { label: "About", href: "/about" },
-      { label: "Contact us", href: "/contact" },
-      { label: "Careers", href: "#" },
-      { label: "Press", href: "#" }
+      { label: "Contact", href: "/contact" }
     ]
   },
   {
@@ -76,7 +74,7 @@ export function Footer() {
           ))}
         </div>
         <div className="foot-bottom">
-          <span>© 2026 CAREERXEL · ALL RIGHTS RESERVED</span>
+          <span>© 2024–{new Date().getFullYear()} CareerXel · ALL RIGHTS RESERVED</span>
           <div className="foot-social">
             <a href="#" aria-label="CareerXel on X">
               <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
