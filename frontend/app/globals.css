@@ -216,6 +216,7 @@ button, input, textarea, select {
   display: flex;
   flex-direction: column;
   line-height: 1;
+  margin-left: 8px;
 }
 
 .brand-tagline {
@@ -465,6 +466,12 @@ button, input, textarea, select {
   display: inline-block;
   border-radius: 2px;
   box-shadow: 0 0 0 4px rgba(74,139,255,0.18);
+}
+
+.brand-logo {
+  height: 26px;
+  width: auto;
+  object-fit: contain;
 }
 .nav-links { display: flex; gap: 28px; }
 .nav-links a,

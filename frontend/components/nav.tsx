@@ -78,14 +78,24 @@ export function Nav() {
     <>
       <nav className="nav">
         <div className="nav-inner">
-          <Link className="brand" href="/">
+          {/* <Link className="brand" href="/">
             <span className="mark" />
             <span className="brand-text">
               CareerXel
               <span className="brand-tagline">Accelerating Careers, Empowering Futures</span>
             </span>
+          </Link> */}
+          <Link className="brand" href="/">
+            <img
+              src="/idslogo.png"
+              alt="IDS Logo"
+              className="brand-logo"
+            />
+            <span className="brand-text">
+              CareerXel
+              <span className="brand-tagline">Accelerating Careers, Empowering Futures</span>
+            </span>
           </Link>
-
           <div className="nav-links">
             {navItems.map((item) => {
               if (item.dropdownItems) {
