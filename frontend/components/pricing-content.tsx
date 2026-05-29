@@ -184,9 +184,6 @@ export function PricingContent({ content }: { content: PricingContentType }) {
                 <Link className="btn btn-primary" href={ctaHref(content.enterprise.primaryCta, "/contact")}>
                   {content.enterprise.primaryCta}
                 </Link>
-                <Link className="btn btn-ghost" href={ctaHref(content.enterprise.secondaryCta, "/contact")}>
-                  {content.enterprise.secondaryCta}
-                </Link>
               </div>
             </div>
             <div className="pricing-enterprise-grid">
@@ -243,8 +240,7 @@ export function PricingContent({ content }: { content: PricingContentType }) {
             </h2>
             <p className="lead lead--center" style={{ maxWidth: "40rem" }}>{content.finalCta.description}</p>
             <div className="hero-cta hero-cta--center">
-              <Link className="btn btn-primary" href={ctaHref(content.finalCta.primaryCta, "/pricing")}>{content.finalCta.primaryCta}</Link>
-              <Link className="btn btn-ghost" href={ctaHref(content.finalCta.secondaryCta, "/contact")}>{content.finalCta.secondaryCta}</Link>
+              <Link className="btn btn-primary" href={ctaHref("Talk to sales", "/contact")}>Talk to sales</Link>
             </div>
           </div>
         </div>

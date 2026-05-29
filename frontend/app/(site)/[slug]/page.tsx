@@ -56,7 +56,7 @@ export default async function DynamicPage({ params }: Props) {
               <p className="lead">{page.description}</p>
               <div className="hero-cta">
                 <Link className="btn btn-primary" href={primaryHref}>{page.primaryCta}</Link>
-                {showSecondary && <Link className="btn btn-ghost" href={secondaryHref}>{page.secondaryCta}</Link>}
+                {showSecondary && slug !== "colleges" && <Link className="btn btn-ghost" href={secondaryHref}>{page.secondaryCta}</Link>}
               </div>
             </div>
             
@@ -170,8 +170,14 @@ export default async function DynamicPage({ params }: Props) {
             </h2>
             <p className="lead lead--center">Start free today — upgrade when your team is ready.</p>
             <div className="hero-cta hero-cta--center">
-              <Link className="btn btn-primary" href={primaryHref}>{page.primaryCta}</Link>
-              {showSecondary && <Link className="btn btn-ghost" href="/contact">Contact us</Link>}
+              {slug === "colleges" ? (
+                <Link className="btn btn-primary" href="/contact">Contact us</Link>
+              ) : (
+                <>
+                  <Link className="btn btn-primary" href={primaryHref}>{page.primaryCta}</Link>
+                  {showSecondary && <Link className="btn btn-ghost" href={secondaryHref}>{page.secondaryCta}</Link>}
+                </>
+              )}
             </div>
           </div>
         </div>

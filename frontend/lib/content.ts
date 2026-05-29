@@ -174,8 +174,8 @@ export const pages: Record<string, PageContent> = {
     eyebrow: "For colleges",
     headline: "Place students.",
     mutedHeadline: "Prove outcomes.",
-    primaryCta: "Bring campus on board",
-    secondaryCta: "View analytics",
+    primaryCta: "Book a demo",
+    secondaryCta: "Contact us",
     features: [
       { title: "Placement dashboard", text: "Measure readiness, applications, interviews, offers, and salary bands by cohort.", tag: "/DASHBOARD" },
       { title: "Recruiter workspace", text: "Coordinate company visits, shortlists, schedules, and final results.", tag: "/RECRUITERS" },
