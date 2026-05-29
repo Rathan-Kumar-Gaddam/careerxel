@@ -80,7 +80,10 @@ export function Nav() {
         <div className="nav-inner">
           <Link className="brand" href="/">
             <span className="mark" />
-            CareerXel
+            <span className="brand-text">
+              CareerXel
+              <span className="brand-tagline">Accelerating Careers, Empowering Futures</span>
+            </span>
           </Link>
 
           <div className="nav-links">
@@ -137,9 +140,9 @@ export function Nav() {
           </div>
 
           <div className="nav-actions">
-               <a className="btn btn-primary" href="https://www.staging.idsjobportal.outreachtek.com/register">
+            <a className="btn btn-primary" href="https://www.staging.idsjobportal.outreachtek.com/register">
               Sign in
-            
+
             </a>
           </div>
 
@@ -194,9 +197,9 @@ export function Nav() {
           })}
         </div>
         <div className="nav-mobile-actions">
-           <a className="btn btn-primary" href="https://www.staging.idsjobportal.outreachtek.com/register" onClick={() => setOpen(false)}>
+          <a className="btn btn-primary" href="https://www.staging.idsjobportal.outreachtek.com/register" onClick={() => setOpen(false)}>
             Sign in
-          
+
           </a>
         </div>
       </aside>
