@@ -28,7 +28,7 @@ export default function CandidatesPage() {
               </h1>
               <p className="lead">AI-built profiles, smart matching, mock interviews you can keep failing until you don't, and learning roadmaps that actually move the needle.</p>
               <div className="hero-cta">
-                <Link className="btn btn-primary" href="/contact">Book a demo
+                <Link className="btn btn-primary" href="https://www.staging.idsjobportal.outreachtek.com/register">Create free account
                   <svg className="icon" viewBox="0 0 20 20" stroke="currentColor" fill="none"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M5 10h10M11 6l4 4-4 4"/></svg>
                 </Link>
               </div>
@@ -538,8 +538,8 @@ export default function CandidatesPage() {
               It takes less than five minutes. Your first AI mock interview is free.
             </p>
             <div className="hero-cta hero-cta--center">
-              <Link className="btn btn-primary" href="/contact">
-                Book a demo
+              <Link className="btn btn-primary" href="https://www.staging.idsjobportal.outreachtek.com/register">
+                Create free account
                 <svg className="icon" viewBox="0 0 20 20" stroke="currentColor" fill="none"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M5 10h10M11 6l4 4-4 4"/></svg>
               </Link>
             </div>
