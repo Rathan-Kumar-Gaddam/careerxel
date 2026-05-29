@@ -483,7 +483,7 @@ export default function CandidatesPage() {
               <div><h4>College affiliation</h4><p>Join with a code. Surface in placement reports.</p></div>
               <span className="tag">/CAMPUS</span>
             </div>
-            <div className="card-d tile">
+            {/* <div className="card-d tile">
               <div className="icbox">
                 <svg className="icon" viewBox="0 0 20 20" stroke="currentColor" fill="none">
                   <circle cx="10" cy="10" r="7" strokeWidth="1.5"/>
@@ -492,7 +492,7 @@ export default function CandidatesPage() {
               </div>
               <div><h4>7 languages</h4><p>EN · ES · FR · HI · TA · PT · AR.</p></div>
               <span className="tag">/I18N</span>
-            </div>
+            </div> */}
             <div className="card-d tile">
               <div className="icbox">
                 <svg className="icon" viewBox="0 0 20 20" stroke="currentColor" fill="none">
